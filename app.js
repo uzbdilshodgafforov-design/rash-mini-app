@@ -1,4 +1,5 @@
 alert("JS ishlayapti");
+
 const tg = window.Telegram.WebApp;
 tg.expand();
 
@@ -18,20 +19,11 @@ function requestExcel() {
     }));
 }
 
-
 function openStudent() {
-    content.innerHTML = `
-        <h3>👨‍🎓 O‘quvchi bo‘limi</h3>
-        <p>Bu yerda testlar bo‘ladi</p>
-        <p>(40 ta A/B/C/D + 5 ta yozma)</p>
-    `;
+    content.innerHTML = "<p>O‘quvchi bo‘limi</p>";
 }
 
 function openGuide() {
-    content.innerHTML = `
-        <h3>📘 Qo‘llanma</h3>
-        <p>Bu bo‘limga keyin video joylanadi</p>
-    `;
+    content.innerHTML = "<p>Qo‘llanma</p>";
 }
-
 
