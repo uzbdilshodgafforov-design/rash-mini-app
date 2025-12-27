@@ -26,4 +26,3 @@ function openStudent() {
 function openGuide() {
     content.innerHTML = "<p>Qo‘llanma</p>";
 }
-
