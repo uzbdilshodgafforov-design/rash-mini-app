@@ -1,27 +1,28 @@
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-const content = document.getElementById("content");
+document.addEventListener("DOMContentLoaded", () => {
+    const content = document.getElementById("content");
 
-function openTeacher() {
-    content.innerHTML = `
-        <h3>👨‍🏫 O‘qituvchi bo‘limi</h3>
-        <p>Evalbee Excel faylini yuklash uchun tugmani bosing</p>
-        <button onclick="requestExcel()">📂 Excel yuklash</button>
-    `;
-}
+    document.getElementById("btn-teacher").addEventListener("click", () => {
+        content.innerHTML = `
+            <h3>👨‍🏫 O‘qituvchi bo‘limi</h3>
+            <p>Evalbee Excel faylini yuklash uchun tugmani bosing</p>
+            <button id="uploadExcel">📂 Excel yuklash</button>
+        `;
 
-function requestExcel() {
-    tg.sendData(JSON.stringify({
-        action: "upload_excel"
-    }));
-}
+        document.getElementById("uploadExcel").addEventListener("click", () => {
+            tg.sendData(JSON.stringify({
+                action: "upload_excel"
+            }));
+        });
+    });
 
-function openStudent() {
-    content.innerHTML = "<p>O‘quvchi bo‘limi</p>";
-}
+    document.getElementById("btn-student").addEventListener("click", () => {
+        content.innerHTML = "<h3>👨‍🎓 O‘quvchi bo‘limi</h3>";
+    });
 
-function openGuide() {
-    content.innerHTML = "<p>Qo‘llanma</p>";
-}
-
+    document.getElementById("btn-guide").addEventListener("click", () => {
+        content.innerHTML = "<h3>📘 Qo‘llanma</h3><p>Keyin video qo‘shiladi</p>";
+    });
+});
