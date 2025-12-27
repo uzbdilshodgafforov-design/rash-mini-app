@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Rash Assessment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>📊 Rash Assessment System</h2>
+
+    <div class="menu">
+        <button onclick="openTeacher()">👩‍🏫 O‘qituvchi</button>
+        <button onclick="openStudent()">👨‍🎓 O‘quvchi</button>
+        <button onclick="openGuide()">ℹ️ Qo‘llanma</button>
+    </div>
+
+    <!-- O‘qituvchi -->
+    <div id="teacher" class="panel hidden">
+        <h3>👩‍🏫 O‘qituvchi paneli</h3>
+        <input type="file" accept=".xlsx">
+        <button>📊 Hisoblash</button>
+        <button>⬇️ Natijani yuklab olish</button>
+    </div>
+
+    <!-- O‘quvchi -->
+    <div id="student" class="panel hidden">
+        <h3>👨‍🎓 O‘quvchi testi</h3>
+
+        <div id="tests"></div>
+
+        <h4>✍️ Yozma savollar</h4>
+        <textarea placeholder="41-savol"></textarea>
+        <textarea placeholder="42-savol"></textarea>
+        <textarea placeholder="43-savol"></textarea>
+        <textarea placeholder="44-savol"></textarea>
+        <textarea placeholder="45-savol"></textarea>
+
+        <button>✅ Yuborish</button>
+    </div>
+
+    <!-- Qo‘llanma -->
+    <div id="guide" class="panel hidden">
+        <h3>ℹ️ Qo‘llanma</h3>
+        <p><b>O‘qituvchi:</b> Evalbee Excel → yuklash → natija</p>
+        <p><b>O‘quvchi:</b> Testni belgilang va yuboring</p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
