@@ -1,28 +1,31 @@
-const tg = window.Telegram.WebApp;
-tg.expand();
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("content");
 
-    document.getElementById("btn-teacher").addEventListener("click", () => {
+    const teacherBtn = document.getElementById("teacherBtn");
+    const studentBtn = document.getElementById("studentBtn");
+    const guideBtn = document.getElementById("guideBtn");
+
+    teacherBtn.addEventListener("click", function () {
         content.innerHTML = `
             <h3>👨‍🏫 O‘qituvchi bo‘limi</h3>
-            <p>Evalbee Excel faylini yuklash uchun tugmani bosing</p>
-            <button id="uploadExcel">📂 Excel yuklash</button>
+            <p>Evalbee Excel faylini yuklang</p>
+            <button id="excelBtn">📂 Excel yuklash</button>
         `;
-
-        document.getElementById("uploadExcel").addEventListener("click", () => {
-            tg.sendData(JSON.stringify({
-                action: "upload_excel"
-            }));
-        });
     });
 
-    document.getElementById("btn-student").addEventListener("click", () => {
-        content.innerHTML = "<h3>👨‍🎓 O‘quvchi bo‘limi</h3>";
+    studentBtn.addEventListener("click", function () {
+        content.innerHTML = `
+            <h3>👨‍🎓 O‘quvchi bo‘limi</h3>
+            <p>Bu yerda test ishlanadi</p>
+        `;
     });
 
-    document.getElementById("btn-guide").addEventListener("click", () => {
-        content.innerHTML = "<h3>📘 Qo‘llanma</h3><p>Keyin video qo‘shiladi</p>";
+    guideBtn.addEventListener("click", function () {
+        content.innerHTML = `
+            <h3>📘 Qo‘llanma</h3>
+            <p>Bu yerga keyin video qo‘shiladi</p>
+        `;
     });
+
 });
