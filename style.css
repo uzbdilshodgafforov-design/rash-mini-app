@@ -1,37 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #f4f4f4;
     margin: 0;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
 }
 
-.container {
-    background: white;
+h2 {
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
     padding: 15px;
-    border-radius: 12px;
-}
-
-.menu button {
-    width: 100%;
-    padding: 14px;
-    margin: 6px 0;
     font-size: 16px;
-    border-radius: 8px;
     border: none;
-    background: #2a8cff;
+    border-radius: 10px;
+    background: #0088cc;
     color: white;
+    cursor: pointer;
 }
 
-.panel {
-    margin-top: 15px;
+button:active {
+    background: #006699;
 }
 
-.hidden {
-    display: none;
-}
-
-textarea {
-    width: 100%;
-    height: 60px;
-    margin-bottom: 6px;
+#content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
