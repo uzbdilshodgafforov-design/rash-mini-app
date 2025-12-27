@@ -12,11 +12,14 @@
 <div class="container">
     <h2>📊 Rash Assessment System</h2>
 
-    <div class="menu">
-        <button onclick="openTeacher()">👩‍🏫 O‘qituvchi</button>
-        <button onclick="openStudent()">👨‍🎓 O‘quvchi</button>
-        <button onclick="openGuide()">ℹ️ Qo‘llanma</button>
-    </div>
+   <div class="menu">
+    <button id="btn-teacher">👨‍🏫 O‘qituvchi</button>
+    <button id="btn-student">👨‍🎓 O‘quvchi</button>
+    <button id="btn-guide">📘 Qo‘llanma</button>
+</div>
+
+<div id="content"></div>
+
 
     <!-- O‘qituvchi -->
     <div id="teacher" class="panel hidden">
@@ -53,3 +56,4 @@
 <script src="app.js"></script>
 </body>
 </html>
+
