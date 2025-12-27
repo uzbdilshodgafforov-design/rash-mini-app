@@ -1,3 +1,4 @@
+alert("JS ishlayapti");
 const tg = window.Telegram.WebApp;
 tg.expand();
 
@@ -32,4 +33,5 @@ function openGuide() {
         <p>Bu bo‘limga keyin video joylanadi</p>
     `;
 }
+
 
