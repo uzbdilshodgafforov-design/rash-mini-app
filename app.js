@@ -1,5 +1,3 @@
-alert("JS ishlayapti");
-
 const tg = window.Telegram.WebApp;
 tg.expand();
 
@@ -26,3 +24,4 @@ function openStudent() {
 function openGuide() {
     content.innerHTML = "<p>Qo‘llanma</p>";
 }
+
